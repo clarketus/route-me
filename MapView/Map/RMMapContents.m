@@ -131,10 +131,13 @@
 	tileLoader = nil;
     
     screenScale = 1.0;
-    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
-    {
-        screenScale = [[[UIScreen mainScreen] valueForKey:@"scale"] floatValue];
-    }
+
+  // Always use non-retina sized screen rendering
+
+//    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
+//    {
+//        screenScale = [[[UIScreen mainScreen] valueForKey:@"scale"] floatValue];
+//    }
 
 	boundingMask = RMMapMinWidthBound;
 
